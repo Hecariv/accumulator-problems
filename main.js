@@ -94,11 +94,6 @@ function doubleNumbers(numbers) {
 */
 
 
-
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -137,12 +132,6 @@ function interleave(arr1, arr2) {
     if (arr1.length === 0 && arr2.length === 0) {
         return [];
     }
-    for (let i = 0; i < arr1; i++) {
-        arr3.push(arr1[i]);
-        arr3.push(arr2[i]);
-    }
-    return arr3;
-
 }
 
 
@@ -162,7 +151,13 @@ Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "
 */
 
 
-
+function createRange(num, str) {
+    let arrStr = [];
+    for (let i = 0; i < num; i++) {
+        arrStr.push(str);
+    }
+    return arrStr;
+}
 
 
 
