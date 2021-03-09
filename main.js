@@ -40,9 +40,8 @@ results on the index page in the browser.
 //    return sum;
 //}
 
-function sum(arr) {
-    return arr.length > 0 ? arr.reduce.((acc, curr) => acc + curr) : 0;
-}
+    const sum = (arr) =>  arr.length > 0 ? arr.reduce((acc,curr) => acc + curr) : 0 ;
+
 
 
 
@@ -59,22 +58,18 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
-function doubleLetters(word) {
-    if (word.length === 0) {
-        return "";
-    }
-    let newWord = "";
-    for (let i = 0; i < word.length; i++) {
-        newWord += (word[i] + word[i]); 
-    }
-    return newWord;
-}
+//function doubleLetters(word) {
+ //   if (word.length === 0) {
+ //       return "";
+ //   }
+ //   let newWord = "";
+ //   for (let i = 0; i < word.length; i++) {
+ //       newWord += (word[i] + word[i]); 
+ //   }
+ //   return newWord;
+//}
 
-
-
-
-
-
+const doubleLetters = (word) => word.length > 0 ? word.split("").map((letter) => letter + letter).join("") : "";
 
 
 /*
@@ -137,7 +132,18 @@ NOTE: you can assume each input will be the same length
 
 
 
+function interleave(arr1, arr2) {
+    let arr3 = []
+    if (arr1.length === 0 && arr2.length === 0) {
+        return [];
+    }
+    for (let i = 0; i < arr1; i++) {
+        arr3.push(arr1[i]);
+        arr3.push(arr2[i]);
+    }
+    return arr3;
 
+}
 
 
 
