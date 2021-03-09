@@ -126,18 +126,13 @@ NOTE: you can assume each input will be the same length
 */
 
 
+const interleave = (a,b) => {
 
-function interleave(arr1, arr2) {
-    let arr3 = []
-    if (arr1.length === 0 && arr2.length === 0) {
-        return [];
-    }
-}
-
-
-
-
-
+    return a.reduce((acc,curr,index) => {
+       acc.push(curr, b[index]);
+       return acc;
+    },[]);
+   }
 
 
 /*
@@ -151,16 +146,13 @@ Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "
 */
 
 
-function createRange(num, str) {
+let createRange = (num, str)  => {
     let arrStr = [];
     for (let i = 0; i < num; i++) {
         arrStr.push(str);
     }
     return arrStr;
 }
-
-
-
 
 
 /*
@@ -176,10 +168,13 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 */
 
 
-
-
-
-
+const flipArray = (incoming) => {
+    obj = {};
+    incoming.forEach((val, index) => {
+        obj[val] = index;
+    });
+    return obj;
+}
 
 
 /*
@@ -195,12 +190,13 @@ If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: 
 
 */
 
-
-
-
-
-
-
+const arraysToObject = (arr) => {
+    obj = {};
+    arr.forEach(val => { 
+        obj[val[0]] = val[1];
+    });
+    return obj;
+}
 
 
 /*
