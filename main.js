@@ -211,7 +211,13 @@ If you pass it "hello" then it should return "olleh"
 
 
 
-
+const reverseString = (str) => {
+    newStr = "";
+    for (let i = 0; i < str.length; i++) {
+        newStr = str[i] + newStr;
+    }
+    return newStr;
+}
 
 
 
