@@ -31,7 +31,18 @@ results on the index page in the browser.
 */
 
 
+//function sum(arr) {
+//    if (arr.length === 0) { return 0 }
+//    let sum = 0;
+//    for(let i = 0; i < arr.length; i++) {
+//        sum += arr[i]
+//    }
+//    return sum;
+//}
 
+function sum(arr) {
+    return arr.length > 0 ? arr.reduce.((acc, curr) => acc + curr) : 0;
+}
 
 
 
@@ -48,7 +59,16 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
-
+function doubleLetters(word) {
+    if (word.length === 0) {
+        return "";
+    }
+    let newWord = "";
+    for (let i = 0; i < word.length; i++) {
+        newWord += (word[i] + word[i]); 
+    }
+    return newWord;
+}
 
 
 
@@ -68,6 +88,15 @@ Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
 
+const doubleNumbers = (numbers) =>  numbers.map((num) => num * 2);
+
+/* 
+
+function doubleNumbers(numbers) {
+    return numbers.map((num) => num * 2);
+}
+
+*/
 
 
 
@@ -89,11 +118,7 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
-
-
-
-
-
+const  multiplyNumbers = (arr, num) => arr.map((number) => number * num);
 
 
 
