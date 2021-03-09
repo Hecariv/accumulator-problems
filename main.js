@@ -126,12 +126,10 @@ NOTE: you can assume each input will be the same length
 */
 
 
-const interleave = (a,b) => {
-
-    return a.reduce((acc,curr,index) => {
-       acc.push(curr, b[index]);
-       return acc;
-    },[]);
+const interleave = (arr1,arr2) => {
+    let newArr = [];
+    arr1.forEach((letter, index) => newArr.push(letter, arr2[index]))
+    return newArr;
    }
 
 
