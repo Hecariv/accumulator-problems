@@ -166,9 +166,9 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 */
 
 
-const flipArray = (incoming) => {
+const flipArray = (words) => {
     obj = {};
-    incoming.forEach((val, index) => {
+    words.forEach((val, index) => {
         obj[val] = index;
     });
     return obj;
